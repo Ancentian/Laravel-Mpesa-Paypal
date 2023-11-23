@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MPESAC2BController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//MPESA C2B
+
+Route::post('validation', [MPESAC2BController::class, 'validation'])->name('c2b.validate');
+Route::post('confirmation', [MPESAC2BController::class, 'confirmation'])->name('c2b.confirm');
