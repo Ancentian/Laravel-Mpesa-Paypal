@@ -13,7 +13,9 @@
 	<link rel="stylesheet" href="{{asset('assets/css/feathericon.min.css')}}">
 	<link rel="stylehseet" href="h{{asset('ttps://cdn.oesmith.co.uk/morris-0.5.1.css')}}">
 	<link rel="stylesheet" href="{{asset('assets/plugins/morris/morris.css')}}">
-	<link rel="stylesheet" href="{{asset('assets/css/style.css')}}"> </head>
+	<link rel="stylesheet" href="{{asset('assets/css/style.css')}}"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+</head>
 
 <body>
 	<div class="main-wrapper">
@@ -32,7 +34,12 @@
 						<li class="active"> <a href="{{route('home')}}"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a> </li>
 						<li class="list-divider"></li>
 						<li class="active"> <a href="{{route('stkpush')}}"><i class="fas fa-tachometer-alt"></i> <span> Mpesa</span></a> </li>
-            <li class="active"> <a href="index.html"><i class="fas fa-tachometer-alt"></i> <span> Paypal</span></a> </li>
+            			<li class="active" style="color: blue;">
+							<a href="{{ route('paypal.index') }}">
+								<i class="fab fa-paypal"></i> 
+								<span> Paypal</span>
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -49,6 +56,7 @@
 <script src="{{asset('assets/plugins/morris/morris.min.js')}}"></script>
 <script src="{{asset('assets/js/chart.morris.js')}}"></script>
 <script src="{{asset('assets/js/script.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 @include('layouts.scripts')
 </body>
 

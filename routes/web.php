@@ -5,6 +5,7 @@ use App\Http\Controllers\MpesaController;
 use App\Http\Controllers\MpesaSTKPUSHController;
 use App\Http\Controllers\MPESAC2BController;
 use App\Http\Controllers\MPESAB2CController;
+use App\Http\Controllers\PayPalPaymentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,5 +35,11 @@ Route::post('/v1/b2c/simulate', [MPESAB2CController::class, 'simulate'])->name('
 // MPESA B2C
 Route::post('v1/b2c/result', [MPESAB2CController::class, 'result'])->name('b2c.result');
 Route::post('v1/b2c/timeout', [MPESAB2CController::class, 'timeout'])->name('b2c.timeout');
+
+//PAYPAL
+Route::get('paypal/index', [PayPalPaymentController::class, 'index'])->name('paypal.index');
+Route::post('handle-payment', [PayPalPaymentController::class, 'handlePayment'])->name('make.payment');
+Route::get('cancel-payment', [PayPalPaymentController::class, 'paymentCancel'])->name('payment.cancel');
+Route::get('payment-success', [PayPalPaymentController::class, 'paymentSuccess'])->name('payment.success');
 
 
