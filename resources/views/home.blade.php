@@ -18,7 +18,7 @@
 							<div class="card-header">
 								<h4 class="card-title">Mpesa</h4> </div>
 							<div class="card-body">
-								
+								<img src="{{asset('img/mpesa.png')}}" alt="Mpesa" width="200px" height="200px">
 							</div>
 						</div>
 					</div>
@@ -27,7 +27,7 @@
 							<div class="card-header">
 								<h4 class="card-title">Paypal</h4> </div>
 							<div class="card-body">
-								
+								<img src="{{asset('img/paypal.png')}}" alt="Mpesa" width="300px" height="200px">
 							</div>
 						</div>
 					</div>
